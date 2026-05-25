@@ -3,6 +3,9 @@ sudo apt install samba -y
 
 sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.backup
 
+sudo nano /etc/samba/smb.conf
+
+
 [Home]
    path = /home/sammers
    browseable = yes
@@ -15,3 +18,6 @@ sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.backup
    guest ok = no
    writable = yes
 
+sudo smbpasswd -a sammers 
+
+sudo systemctl restart smbd 
