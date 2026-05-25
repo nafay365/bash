@@ -1,4 +1,17 @@
 sudo apt update
-sudo apt install nemo-terminal nemo-fileroller nemo-media-columns nemo-image-converter nemo-share -y
+sudo apt install samba -y
 
-sudo apt install gnome-disk-utility -y
+sudo cp /etc/samba/smb.conf /etc/samba/smb.conf.backup
+
+[Home]
+   path = /home/sammers
+   browseable = yes
+   read only = no
+   valid users = sammers
+   create mask = 0755
+   directory mask = 0755
+   force user = sammers
+   force group = sammers
+   guest ok = no
+   writable = yes
+
