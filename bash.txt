@@ -1,0 +1,10 @@
+sudo sed -i 's/Categories=121/Categories=Global Themes (Plasma 5)/' /usr/share/knsrcfiles/lookandfeel.knsrc
+
+wget https://store.kde.org/product/XXXXXX -O ~/Downloads/win11-theme.tar.gz
+
+mkdir -p ~/.local/share/plasma/look-and-feel/
+tar -xzf ~/Downloads/win11-theme.tar.gz -C ~/.local/share/plasma/look-and-feel/
+
+lookandfeeltool --list
+
+lookandfeeltool -a org.kde.win11-theme.desktop
