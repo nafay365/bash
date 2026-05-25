@@ -1,10 +1,12 @@
-sudo sed -i 's/Categories=121/Categories=Global Themes (Plasma 5)/' /usr/share/knsrcfiles/lookandfeel.knsrc
+sudo apt remove --purge kubuntu-desktop plasma-desktop kde-plasma-desktop plasma-workspace sddm -y
 
-wget https://store.kde.org/product/XXXXXX -O ~/Downloads/win11-theme.tar.gz
 
-mkdir -p ~/.local/share/plasma/look-and-feel/
-tar -xzf ~/Downloads/win11-theme.tar.gz -C ~/.local/share/plasma/look-and-feel/
+sudo apt remove --purge kubuntu-desktop plasma-desktop kde-plasma-desktop plasma-workspace sddm -y 
 
-lookandfeeltool --list
+sudo apt install ubuntu-desktop gdm3 -y
 
-lookandfeeltool -a org.kde.win11-theme.desktop
+sudo dpkg-reconfigure gdm3
+
+sudo apt autoremove --purge -y
+sudo apt autoclean
+sudo reboot
