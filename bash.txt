@@ -1,4 +1,4 @@
-flatpak install flathub com.google.Chrome
+sudo apt update
+sudo apt install nemo -y
 
-sudo apt install flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+xdg-mime default nemo.desktop inode/directory
